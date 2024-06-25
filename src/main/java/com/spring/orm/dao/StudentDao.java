@@ -13,10 +13,17 @@ public class StudentDao {
 	public int insert(Student student) {
 		
 		Integer i = (Integer) this.hibernateTemplate.save(student);
+		System.out.println("response ---------------" + i);
 		return i;
 		
 	}
 	
+
+	public StudentDao() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 
 	public StudentDao(HibernateTemplate hibernateTemplate) {
 		super();
